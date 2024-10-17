@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>20/10 Hạnh Phúc</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="Logo.ico">
+
+<!--Tất cả các anh trong 1 folder sẽ chạy lần lượt time 5s 1 lần đổi-->
+<script type="text/javascript">
+  window.onload = function(){
+    setTimeout("switch_Image()", 5000);
+  }
+  var current = 1;
+  var num_image = 11;
+  function switch_Image(){
+      current++;
+      document.images['imglc'].src ='img/imglc/lc' + current + '.jpg';
+     if(current < num_image){
+       setTimeout("switch_Image()", 5000);
+     }else if(current == num_image){
+       current = 0;
+       setTimeout("switch_Image()", 5000);
+     }
+ }
+</script>
+
+</head>
+<body style="background-image:url(img/backgr.jpg)">
+<div class="container-fluid">
+    <div class="row">
+    
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+	
+        <img  name="imglc" src="img/imglc/lc11.jpg" alt="" style="width:650px; height:570px; margin-top:20px">
+        </a>
+    </div>
+   
+	<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+	
+    <audio id="time" src="audio/Childhood-Memory-Bandari.mp3" controls autoplay="autoplay" loop>
+    </audio>
+    
+    
+		
+    </div>
+    
+    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+		
+    </div>
+   
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+   
+		<marquee direction="up" scrollamount="2" loop="100"> 
+    		<p style="font-size:21px; color:#FFF;">
+   			Ngày phụ nữ Việt Nam là một ngày lễ kỷ niệm nhằm tôn vinh phụ nữ, được tổ chức vào ngày 20 tháng 10 hàng năm ở Việt Nam. Vào dịp này, phụ nữ ở Việt Nam được nhiều người bày tỏ sự quan tâm và tôn vinh dưới nhiều hình thức nhưng phổ biến nhất vẫn là tặng hoa hồng, thiệp và kèm theo những lời chúc mừng.
+        	Vào ngày 20 tháng 10 năm 1930, Hội Phụ nữ phản đế Việt Nam (nay đổi tên là Hội Liên hiệp Phụ nữ Việt Nam) chính thức được thành lập, để đánh dấu sự kiện này, Đảng Cộng sản Việt Nam đã quyết định chọn ngày 20 tháng 10 hằng năm làm ngày truyền thống của tổ chức này, đồng thời cũng xem đây là ngày kỷ niệm và tôn vinh phụ nữ Việt Nam, lấy tên là "Ngày Phụ nữ Việt Nam".
+			Trước năm 1975 tại miền Nam Việt Nam, dưới chính thể Việt Nam Cộng Hòa, Ngày Phụ nữ Việt Nam cũng là ngày tưởng niệm Hai bà Trưng vào ngày 6 tháng 2 âm lịch.
+    		</p>
+		</marquee> 
+        </a>
+    </div>
+
+
+</div> 
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
